@@ -1419,7 +1419,7 @@ header .header-container .left-side .user .user-profile img {
 
 .dashboard .dashboard-content .payment-method-card .card {
     margin-bottom: var(--space-4);
-    perspective: 1200;
+    perspective: 1200px;
 }
 
 .dashboard .dashboard-content .payment-method-card .card:last-child {
