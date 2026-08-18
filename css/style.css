@@ -1,0 +1,1904 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "IBMPlexSansArabic-SemiBold";
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #F9FAFB;
+}
+
+::selection {
+    background-color: var(--bg-selection-color);
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+:root {
+    --color-black: black;
+    --color-white: white;
+    --color-yellow-100: #fef9c2;
+    --color-yellow-600: #d08700;
+    --color-yellow-800: #894b00;
+    --color-orange-100: #ffedd4;
+    --color-orange-500: #ff6900;
+    --color-orange-600: #ff6900;
+    --color-orange-800: #f54a00;
+    --color-red-100: #ffe2e2;
+    --color-red-500: #fb2c36;
+    --color-red-600: #e7000b;
+    --color-red-800: #9f0712;
+    --color-green-50: #f0fdf4;
+    --color-green-100: #dcfce7;
+    --color-green-400: #06df72;
+    --color-green-500: #00c950;
+    --color-green-600: #00a63e;
+    --color-green-700: #008235;
+    --color-green-800: #026630;
+    --color-emerald-100: #d0fae5;
+    --color-emerald-600: #009966;
+    --color-emerald-800: #006045;
+    --color-cyan-100: #cefafe;
+    --color-cyan-600: #0092b8;
+    --color-cyan-800: #005f78;
+    --color-blue-50: #eff6ff;
+    --color-blue-100: #dbeafe;
+    --color-blue-500: #2b7fff;
+    --color-blue-600: #155dfb;
+    --color-blue-700: #1447e6;
+    --color-blue-800: #193cb8;
+    --color-blue-900: #1c398e;
+    --bg-selection-color: #3b82f6;
+    --color-indigo-50: #eef2ff;
+    --color-indigo-100: #e0e7ff;
+    --color-indigo-500: #615fff;
+    --color-indigo-600: #4f39f6;
+    --color-indigo-700: #432dd7;
+    --color-indigo-800: #372aac;
+    --color-purple-100: #f3e8ff;
+    --color-purple-500: #ad46ff;
+    --color-purple-600: #9810fa;
+    --color-purple-800: #6e11b0;
+    --color-pink-100: #fce7f3;
+    --color-pink-500: #f6339a;
+    --color-pink-600: #e60076;
+    --color-rose-700: #c70036;
+    --color-gray-50: #F9FAFB;
+    --color-gray-100: #f6f3f4;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5dc;
+    --color-gray-500: #6a7282;
+    --color-gray-600: #4a5565;
+    --color-gray-700: #364153;
+    --color-gray-900: #101828;
+    --shadow-color: #0000001a;
+    --border-2: 1px solid #ebe6e7;
+    --border-1: 1px solid var(--color-blue-100);
+    --padding-margin-space-1: 1.5rem;
+    --padding-margin-space-2: 2rem;
+    --fast-transition: .15s;
+    --normal-transition: .3s;
+    --space-4: 1rem;
+    --space-3: 0.75rem;
+    --space-2: 0.5rem;
+    --space-1: 0.25rem;
+}
+
+/* ------------------------------grouping--------------------------------- */
+aside .aside-content .logo,
+aside .aside-content .logo .logo-icon,
+aside .aside-content .menu li,
+header .header-container .logo,
+header .header-container .logo .logo-icon,
+aside .aside-content .menu .quick-links .links li .icon,
+header .header-container,
+header .header-container .left-side,
+header .header-container .left-side .icons,
+header .header-container .status,
+header .header-container .left-side .notification-icon,
+header .header-container .left-side .search-icon,
+header .header-container .left-side .notification-icon .notification-count,
+header .header-container .left-side .user,
+.dashboard .dashboard-analysis .cards,
+.dashboard .dashboard-analysis .cards .card .rate,
+.dashboard .dashboard-content .container .title,
+.dashboard .dashboard-content .recent-activities .activity-cards .card,
+.dashboard .dashboard-content .recent-activities .activity-cards .card .icon,
+.dashboard .dashboard-content .recent-activities .activity-cards .info .info-title,
+.dashboard .dashboard-content .title .view-all,
+.dashboard .dashboard-content .billing .cards .card,
+.dashboard .dashboard-content .billing .cards .card .icon,
+.dashboard .dashboard-content .transactions-card table tbody .transaction-profile,
+.dashboard .dashboard-content .transactions-card table tbody .transaction-profile .transaction-avatar,
+.dashboard .dashboard-content .budget-overview .budget-summary .info-top,
+.dashboard .dashboard-content .budget-overview .budget-summary .info-bottom,
+.dashboard .dashboard-content .budget-overview .budget-summary .info-bottom .range-details,
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details,
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .category-info,
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .icon,
+.dashboard .dashboard-content .income-vs-outcome-card .chart-legend,
+.dashboard .dashboard-content .income-vs-outcome-card .chart-legend .item,
+.dashboard .dashboard-content .income-vs-outcome-card .charts,
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart,
+.dashboard .dashboard-content .account-summary-card .cards .card .card-info,
+.dashboard .dashboard-content .account-summary-card .cards .card,
+.dashboard .dashboard-content .account-summary-card .cards .card .icon,
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-top,
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-top .card-bg-white,
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-bottom .card-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.dashboard .logo .logo-title h1,
+.dashboard .dashboard-analysis .cards .card p,
+.dashboard .dashboard-content .recent-activities .activity-cards .info .info-title h3,
+.dashboard .dashboard-content .billing .payment-total span,
+.dashboard .dashboard-content .budget-overview .budget-summary .info-top .info-right span,
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back .cvv .num {
+    font-family: "IBMPlexSansArabic-Bold";
+}
+
+.dashboard .dashboard-content .title .view-all a,
+.dashboard .dashboard-content .title .view-all i,
+header .header-container .status span,
+.dashboard .dashboard-content .recent-activities .activity-cards .card .info .info-title span,
+.dashboard .dashboard-content .recent-activities .all-activities a,
+.dashboard .dashboard-content .transactions-card table tbody .status span,
+.dashboard .dashboard-content .transactions-card table tbody .transaction-type span,
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .budget-range-number span,
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-bottom .card-details p {
+    font-family: "IBMPlexSansArabic-Medium";
+}
+
+.dashboard .logo .logo-title p,
+aside .aside-content .menu .quick-links h2,
+aside .aside-content .menu .quick-links .links li h3,
+header .header-container .status span,
+header .header-container .left-side .user .user-info h2,
+.dashboard .dashboard-analysis .cards .card h2,
+.dashboard .dashboard-analysis .cards .card .rate,
+.dashboard .dashboard-content .recent-activities .activity-cards .card .icon,
+.dashboard .dashboard-content .recent-activities .activity-cards .info .info-title h3,
+.dashboard .dashboard-content .recent-activities .all-activities a,
+.dashboard .dashboard-content .title .view-all,
+.dashboard .dashboard-content .billing .payment-total p,
+.dashboard .dashboard-content .billing .cards .card .icon i,
+.dashboard .dashboard-content .transactions-card table thead th,
+.dashboard .dashboard-content .transactions-card table tbody .transaction-profile .transaction-info h3,
+.dashboard .dashboard-content .transactions-card table tbody .transaction-date,
+.dashboard .dashboard-content .transactions-card table tbody .transaction-amount,
+.dashboard .dashboard-content .budget-overview .budget-summary .info-top .info-right h3,
+.dashboard .dashboard-content .budget-overview .budget-summary .info-top .info-left h4,
+.dashboard .dashboard-content .account-summary-card .cards .card .info h3,
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-bottom .card-details p {
+    font-size: .875rem;
+    line-height: 1.42857;
+}
+
+header .header-container .left-side .notification-icon .notification-count span,
+header .header-container .left-side .user .user-info p,
+.dashboard .dashboard-content .recent-activities .activity-cards .card .info .info-title span,
+.dashboard .dashboard-content .recent-activities .activity-cards .card:first-child .info .info-title span,
+.dashboard .dashboard-content .recent-activities .activity-cards .info p,
+.dashboard .dashboard-content .recent-activities .activity-cards .info .period,
+.dashboard .dashboard-content .billing .cards .card h3,
+.dashboard .dashboard-content .billing .cards .card span,
+.transactions-card table tbody .transaction-profile .transaction-info p,
+.transactions-card table tbody .status span,
+.transactions-card table tbody .transaction-type span,
+.dashboard .dashboard-content .budget-overview .budget-summary .info-bottom .range-details span,
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .details p,
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .budget-range-number span,
+.dashboard .dashboard-content .income-vs-outcome-card .chart-legend span,
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart .week span,
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart .week span,
+.dashboard .dashboard-content .account-summary-card .cards .card .info p,
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-bottom .card-details h3,
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back .cvv h3 {
+    font-size: .75rem;
+    line-height: 1.33333;
+}
+
+.dashboard .dashboard-content .container .title {
+    padding-bottom: var(--padding-margin-space-1);
+    justify-content: space-between;
+}
+
+.dashboard .dashboard-content .container .title h2 {
+    font-size: 1.125rem;
+    line-height: 1.55556;
+    color: var(--color-gray-900);
+}
+
+.dashboard .dashboard-content .title .view-all {
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dashboard .dashboard-content .title .view-all a,
+.dashboard .dashboard-content .title .view-all i {
+    color: var(--color-gray-600);
+    transition: color var(--fast-transition);
+}
+
+.dashboard .dashboard-content .title .view-all a:hover,
+.dashboard .dashboard-content .title .view-all i:hover {
+    color: var(--color-gray-900);
+}
+
+.dashboard .dashboard-content .billing .container .title,
+.dashboard .dashboard-content .transactions-card .container .title {
+    padding-bottom: var(--space-4);
+}
+
+
+/* ------------------------------end of grouping--------------------------------- */
+
+
+/* ------------------------------sidebar--------------------------------- */
+
+.dashboard .logo .logo-title h1 {
+    color: var(--color-gray-900);
+    font-size: 2.25rem;
+    line-height: 1.11111;
+}
+
+.dashboard .logo .logo-title p {
+    margin-top: var(--space-1);
+    color: var(--color-gray-600);
+}
+
+.dashboard .logo .logo-icon {
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(var(--color-blue-600), var(--color-indigo-700));
+    border-radius: var(--space-4);
+    margin-left: var(--space-4);
+    color: var(--color-white);
+    font-size: 1.25rem;
+    line-height: 1.4;
+    box-shadow: 0 10px 15px -3px rgba(48, 128, 255, 0.2);
+}
+
+.dashboard .logo .logo-icon {
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(var(--color-blue-600), var(--color-indigo-700));
+    border-radius: var(--space-4);
+    margin-left: var(--space-4);
+    color: var(--color-white);
+    font-size: 1.25rem;
+    line-height: 1.4;
+    box-shadow: 0 10px 15px -3px rgba(48, 128, 255, 0.2);
+}
+
+aside {
+    width: 256px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #9ca3af4d transparent;
+    overflow-y: auto;
+    box-shadow: 0 -3px 12px var(--shadow-color);
+    background-color: var(--color-white);
+}
+
+aside .aside-content {
+    padding: var(--padding-margin-space-1);
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside .aside-content .logo {
+    margin-bottom: var(--padding-margin-space-2);
+}
+
+aside .aside-content .menu ul li {
+    cursor: pointer;
+}
+
+aside .aside-content .menu .main-links ul li {
+    gap: .75rem;
+    color: var(--color-gray-600);
+    padding: var(--space-3) var(--space-4);
+    margin-bottom: var(--space-2);
+}
+
+aside .aside-content .menu .main-links ul li span {
+    color: var(--color-gray-500);
+}
+
+aside .aside-content .menu .main-links ul li h2 {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+aside .aside-content .menu .main-links ul li:last-child {
+    margin-bottom: 0;
+}
+
+aside .aside-content .menu .main-links ul li span i {
+    width: 20px;
+    color: var(--color-gray-500);
+
+}
+
+aside .aside-content .menu .main-links ul li.active {
+    color: var(--color-blue-700);
+    background-color: var(--color-blue-50);
+    border: var(--border-1);
+    border-radius: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+}
+
+aside .aside-content .menu .main-links ul li.active span {
+    color: var(--color-blue-700);
+
+}
+
+aside .aside-content .menu .quick-links {
+    padding-top: var(--padding-margin-space-2);
+}
+
+aside .aside-content .menu .quick-links h2 {
+    color: var(--color-gray-700);
+    padding: 0 var(--space-2) var(--space-4);
+}
+
+aside .aside-content .menu .quick-links .links ul li {
+    gap: .75rem;
+    padding: var(--space-3);
+    margin-bottom: var(--space-3);
+    transition: transform 0.2s;
+}
+
+aside .aside-content .menu .quick-links .links li .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--space-2);
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+aside .aside-content .menu .quick-links .links li h3 {
+    color: var(--color-gray-700);
+}
+
+aside .aside-content .menu .quick-links .links li.send-money .icon {
+    background-color: var(--color-blue-100);
+    color: var(--color-blue-600);
+
+}
+
+aside .aside-content .menu .quick-links .links li.send-money:hover .icon {
+    background-color: #cae0fd;
+
+}
+
+aside .aside-content .menu .quick-links .links li.add-money .icon {
+    background-color: var(--color-green-100);
+    color: var(--color-green-600);
+
+}
+
+aside .aside-content .menu .quick-links .links li.add-money:hover .icon {
+    background-color: #ceffde;
+}
+
+aside .aside-content .menu .quick-links .links li.pay-bill .icon {
+    background-color: var(--color-purple-100);
+    color: var(--color-purple-600);
+
+}
+
+aside .aside-content .menu .quick-links .links li.pay-bill:hover .icon {
+    background-color: #eddcff;
+}
+
+aside .aside-content .menu .quick-links .links li.investment .icon {
+    background-color: var(--color-orange-100);
+    color: var(--color-orange-600);
+}
+
+aside .aside-content .menu .quick-links .links li.investment:hover .icon {
+    background-color: #FCE5D5;
+}
+
+aside .aside-content .menu .quick-links .links li:hover {
+    transform: translate(2px);
+}
+
+/* ------------------------------end of sidebar--------------------------------- */
+
+/* ------------------------------dashboard-container--------------------------------- */
+
+.dashboard-container {
+    margin-right: 16rem;
+}
+
+.dashboard-container .container {
+    padding: var(--padding-margin-space-2);
+}
+
+/* ------------------------------end of dashboard-container--------------------------------- */
+
+
+/* ------------------------------header--------------------------------- */
+
+header {
+    background: linear-gradient(to left, rgb(239 246 255 / 0.6), var(--color-white), rgb(238 242 255 / 0.5));
+    margin-bottom: 2.5rem;
+    border-radius: 1rem;
+    border: .0625rem solid #f3f4f680;
+    box-shadow: 0 2px 5px 0 var(--shadow-color);
+}
+
+header .header-container {
+    justify-content: space-between;
+    padding: var(--padding-margin-space-1);
+}
+
+header .header-container .status.in-mobile {
+    display: none;
+}
+
+header .header-container .status {
+    background-color: var(--color-green-50);
+    border: .0625rem solid var(--color-green-100);
+    border-radius: .5rem;
+    justify-content: space-between;
+    padding: .375rem var(--space-3);
+    margin-right: var(--space-4);
+}
+
+header .header-container .status span {
+    color: var(--color-green-700);
+    padding-right: var(--space-2);
+}
+
+header .header-container .status .circle-status {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-green-500);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+header .header-container .left-side .notification-icon,
+header .header-container .left-side .search-icon {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    border: .0625rem solid var(--color-gray-200);
+    border-radius: 12px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+header .header-container .left-side .notification-icon:hover,
+header .header-container .left-side .search-icon:hover {
+    background-color: var(--color-gray-100);
+}
+
+header .header-container .left-side .notification-icon i,
+header .header-container .left-side .search-icon i {
+    color: var(--color-gray-600);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+header .header-container .left-side .notification-icon {
+    margin-right: var(--space-2);
+    position: relative;
+}
+
+header .header-container .left-side .notification-icon .notification-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: var(--color-red-500);
+    height: 16px;
+    justify-content: center;
+}
+
+header .header-container .left-side .notification-icon .notification-count span {
+    color: var(--color-white);
+}
+
+header .header-container .left-side .user {
+    margin-right: var(--space-3);
+    gap: .75rem;
+    padding: var(--space-2) var(--space-4);
+    justify-content: center;
+    border: 1px solid var(--color-gray-200);
+    background-color: var(--color-white);
+    border-radius: .75rem;
+    box-shadow: 0px 2px 2px 0 var(--shadow-color);
+    transition: box-shadow 0.2s;
+}
+
+header .header-container .left-side .user:hover {
+    box-shadow: 0px 3px 7px 0 var(--shadow-color);
+}
+
+
+header .header-container .left-side .user .user-info h2 {
+    color: var(--color-gray-900);
+}
+
+header .header-container .left-side .user .user-info p {
+    color: var(--color-gray-500);
+}
+
+header .header-container .left-side .user .user-profile {
+    width: 40px;
+    height: 40px;
+}
+
+header .header-container .left-side .user .user-profile img {
+    border-radius: .75rem;
+}
+
+/* ------------------------------end of header--------------------------------- */
+
+/* ------------------------------dashboard summary--------------------------------- */
+
+.dashboard .dashboard-analysis {
+    margin-bottom: var(--padding-margin-space-1);
+}
+
+.dashboard .dashboard-analysis .cards {
+    justify-content: space-between;
+}
+
+.dashboard .dashboard-analysis .cards .card {
+    width: 32%;
+    padding: 2rem;
+    box-shadow: 0 2px 5px 0 var(--shadow-color);
+    border: .0625rem solid var(--color-gray-200);
+    border-radius: 1rem;
+    background-color: var(--color-white);
+}
+
+.dashboard .dashboard-analysis .cards .card h2 {
+    color: var(--color-gray-500);
+    padding-bottom: var(--space-2);
+}
+
+.dashboard .dashboard-analysis .cards .card p {
+    font-size: 2.25rem;
+    line-height: 1.11111;
+    color: var(--color-gray-900);
+}
+
+.dashboard .dashboard-analysis .cards .card .rate {
+    color: var(--color-green-600);
+    padding-top: var(--space-2);
+    padding-left: var(--space-1);
+}
+
+
+.dashboard .dashboard-analysis .cards .card:last-child .rate {
+    color: var(--color-red-600);
+}
+
+/* ------------------------------end of dashboard summary--------------------------------- */
+
+/* ------------------------------layout container--------------------------------- */
+
+.dashboard .dashboard-content .dashboard-content-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* grid-template-areas:
+        "recent-activities final-transaction final-transaction"
+        "bills-card final-transaction final-transaction"
+        "budget-overview income-vs-outcome-card payment-method-card"
+        "budget-overview account-summary-card payment-method-card"; */
+    /* grid-template-rows: repeat(4, minmax(0, 1fr)); */
+    gap: 16px;
+}
+
+.dashboard .dashboard-content .container {
+    padding: var(--padding-margin-space-1);
+    box-shadow: 0 2px 5px 0 var(--shadow-color);
+    border: .0625rem solid var(--color-gray-200);
+    border-radius: 1rem;
+    background-color: var(--color-white);
+    height: 100%;
+}
+
+/* ------------------------------end of layout container--------------------------------- */
+
+/* ------------------------------recent activities--------------------------------- */
+
+.dashboard .dashboard-content .recent-activities {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /* grid-area: recent-activities; */
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards {
+    padding-bottom: var(--space-4);
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .card {
+    padding: var(--space-3);
+    border-radius: .5rem;
+    align-items: flex-start;
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .card:first-child {
+    background-color: var(--color-blue-50);
+    border-left: .25rem solid var(--color-blue-500);
+    margin-bottom: var(--space-3);
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .card:last-child {
+    background-color: var(--color-green-50);
+    border-left: .25rem solid var(--color-green-500);
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .card .icon {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .card:first-child .icon {
+    background-color: var(--color-blue-100);
+    color: var(--color-blue-600);
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .card:last-child .icon {
+    background-color: var(--color-green-100);
+    color: var(--color-green-600);
+
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .info {
+    padding-right: var(--space-3);
+    flex: 1;
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .info .info-title {
+    justify-content: space-between;
+    padding-bottom: var(--space-1);
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .info .info-title h3 {
+    color: var(--color-gray-900);
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .card:first-child .info .info-title span {
+    color: var(--color-blue-600);
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .card:last-child .info .info-title span {
+    color: var(--color-green-600);
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .info p {
+    color: var(--color-gray-600);
+    padding-bottom: var(--space-2);
+}
+
+.dashboard .dashboard-content .recent-activities .activity-cards .info .period {
+    color: var(--color-gray-500);
+}
+
+.dashboard .dashboard-content .recent-activities .all-activities {
+    padding-top: var(--space-4);
+    border-top: .0625rem solid var(--color-gray-100);
+    width: 100%;
+    text-align: center;
+}
+
+.dashboard .dashboard-content .recent-activities .all-activities a {
+    color: var(--color-blue-600);
+    transition: color var(--fast-transition);
+}
+
+.dashboard .dashboard-content .recent-activities .all-activities a:hover {
+    color: var(--color-blue-700);
+}
+
+/* ------------------------------end of recent activities--------------------------------- */
+
+/* ------------------------------bills card--------------------------------- */
+
+.dashboard .dashboard-content .billing {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    /* grid-area: bills-card; */
+}
+
+.dashboard .dashboard-content .billing .payment-total {
+    text-align: center;
+    padding-bottom: var(--space-4);
+}
+
+.dashboard .dashboard-content .billing .payment-total span {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    color: var(--color-gray-900);
+}
+
+.dashboard .dashboard-content .billing .payment-total p {
+    color: var(--color-gray-500);
+}
+
+.dashboard .dashboard-content .billing .cards {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+}
+
+.dashboard .dashboard-content .billing .cards .card {
+    justify-content: center;
+    flex-direction: column;
+    padding: var(--space-3);
+    background-color: #F9FAFB;
+    border: .0625rem solid var(--color-gray-100);
+    border-radius: .75rem;
+}
+
+.dashboard .dashboard-content .billing .cards .card .icon {
+    width: 32px;
+    height: 32px;
+    border-radius: .5rem;
+    margin-bottom: var(--space-2);
+    justify-content: center;
+}
+
+.dashboard .dashboard-content .billing .cards .card.internet .icon {
+    background-color: var(--color-blue-100);
+    color: var(--color-blue-600);
+}
+
+.dashboard .dashboard-content .billing .cards .card.electricity .icon {
+    background-color: var(--color-yellow-100);
+    color: var(--color-yellow-600);
+}
+
+.dashboard .dashboard-content .billing .cards .card.phone .icon {
+    background-color: var(--color-green-100);
+    color: var(--color-green-600);
+}
+
+.dashboard .dashboard-content .billing .cards .card.netflix .icon {
+    background-color: var(--color-red-100);
+    color: var(--color-red-600);
+}
+
+.dashboard .dashboard-content .billing .cards .card h3 {
+    color: var(--color-gray-500);
+}
+
+.dashboard .dashboard-content .billing .cards .card p {
+    color: var(--color-gray-900);
+}
+
+
+.dashboard .dashboard-content .billing .cards .card.internet span,
+.dashboard .dashboard-content .billing .cards .card.electricity span {
+    color: var(--color-orange-500);
+}
+
+.dashboard .dashboard-content .billing .cards .card.phone span {
+    color: var(--color-green-500);
+}
+
+.dashboard .dashboard-content .billing .cards .card.netflix span {
+    color: var(--color-gray-500);
+}
+
+/* ------------------------------end of bills card--------------------------------- */
+
+/* ------------------------------transaction--------------------------------- */
+
+.dashboard .dashboard-content .transactions-card {
+    grid-column: 2/4;
+    grid-row: 1/3;
+    /* grid-area: final-transaction; */
+}
+
+.dashboard .dashboard-content .transactions-card table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+}
+
+.dashboard .dashboard-content .transactions-card table thead tr {
+    border-bottom: .0625rem solid var(--color-gray-100);
+}
+
+.dashboard .dashboard-content .transactions-card table thead th {
+    text-align: right;
+    color: var(--color-gray-700);
+    padding: var(--space-3) var(--space-2);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody td {
+    padding: var(--space-4) var(--space-2);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .transaction-profile .transaction-avatar {
+    width: 40px;
+    height: 40px;
+    margin-left: var(--space-3);
+    justify-content: center;
+}
+
+.dashboard .dashboard-content .transactions-card table tbody tr .transaction-avatar.icon,
+.dashboard .dashboard-content .transactions-card table tbody tr .transaction-avatar img {
+    border-radius: 50%;
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .transaction-profile .transaction-info h3 {
+    color: var(--color-gray-900);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .transaction-profile .transaction-info p {
+    color: var(--color-gray-500);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .status span.completed,
+.dashboard .dashboard-content .transactions-card table tbody .money-transfer .transaction-type span {
+    background-color: var(--color-green-100);
+    color: var(--color-green-800);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .status span,
+.dashboard .dashboard-content .transactions-card table tbody .transaction-type span {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: .125rem .625rem;
+    border-radius: 1.25rem;
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .food .transaction-type span {
+    color: var(--color-orange-800);
+    background-color: var(--color-orange-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .shopping .transaction-type span {
+    color: var(--color-blue-800);
+    background-color: var(--color-blue-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .bill .transaction-type span {
+    color: var(--color-purple-800);
+    background-color: var(--color-purple-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .work .transaction-type span {
+    color: var(--color-green-800);
+    background-color: var(--color-green-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .car .transaction-type span {
+    color: var(--color-red-800);
+    background-color: var(--color-red-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .film .transaction-type span {
+    color: var(--color-indigo-800);
+    background-color: var(--color-indigo-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .gem .transaction-type span {
+    color: var(--color-cyan-800);
+    background-color: var(--color-cyan-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .education .transaction-type span {
+    color: var(--color-emerald-800);
+    background-color: var(--color-emerald-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .transaction-type i {
+    width: 12px;
+    height: 12px;
+    margin-left: var(--space-1);
+}
+
+
+.dashboard .dashboard-content .transactions-card table tbody .food .transaction-avatar.icon {
+    color: var(--color-orange-600);
+    background-color: var(--color-orange-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .shopping .transaction-avatar.icon {
+    color: var(--color-blue-600);
+    background-color: var(--color-blue-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .car .transaction-avatar.icon {
+    color: var(--color-red-600);
+    background-color: var(--color-red-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .film .transaction-avatar.icon {
+    color: var(--color-indigo-600);
+    background-color: var(--color-indigo-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .gem .transaction-avatar.icon {
+    color: var(--color-cyan-600);
+    background-color: var(--color-cyan-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .education .transaction-avatar.icon {
+    color: var(--color-emerald-600);
+    background-color: var(--color-emerald-100);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .status span.paused {
+    background-color: var(--color-yellow-100);
+    color: var(--color-yellow-800);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .transaction-date {
+    color: var(--color-gray-600);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .transaction-amount {
+    color: var(--color-gray-900);
+}
+
+.dashboard .dashboard-content .transactions-card table tbody .transaction-amount.income {
+    color: var(--color-green-600);
+}
+
+/* ------------------------------end of transaction--------------------------------- */
+
+
+/* ------------------------------budget overview--------------------------------- */
+
+.dashboard .dashboard-content .budget-overview {
+    grid-column: 1/2;
+    grid-row: 3/6;
+    /* grid-area: budget-overview;
+    height: fit-content; */
+}
+
+.dashboard .dashboard-content .budget-overview .budget-content {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-content .budget-summary {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: linear-gradient(90deg, var(--color-blue-50), var(--color-indigo-50));
+    border: .0625rem solid var(--color-blue-100);
+    padding: var(--space-4);
+    border-radius: .75rem;
+    margin-bottom: var(--padding-margin-space-1);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-summary .info-top {
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: var(--space-3);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-summary .info-top .info-right {
+    align-self: flex-start;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-summary .info-top .info-right h3 {
+    color: var(--color-blue-600);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-summary .info-top .info-right span {
+    color: var(--color-blue-900);
+    line-height: 1.33333;
+    font-size: 1.5rem;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-summary .info-top .info-left {
+    align-self: flex-end;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-summary .info-top .info-left h4 {
+    color: var(--color-gray-500);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-summary .info-top .info-left span {
+    color: var(--color-green-600);
+    font-size: 1.125rem;
+    line-height: 1.55556;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-summary .info-bottom {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-summary .info-bottom .range-details {
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: var(--space-1);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-summary .info-bottom .range-details span {
+    color: var(--color-gray-600);
+}
+
+.dashboard .dashboard-content .budget-overview .gray-range {
+    background-color: var(--color-gray-200);
+    width: 100%;
+    height: 8px;
+    border-radius: 1.25rem;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-summary .gray-range .color-range {
+    background: linear-gradient(90deg, var(--color-blue-500), var(--color-indigo-500));
+    width: 82.5%;
+}
+
+.dashboard .dashboard-content .budget-overview .gray-range .color-range {
+    height: 8px;
+    border-radius: 1.25rem;
+    animation: progress-fill 1.2s;
+}
+
+@keyframes progress-fill {
+    0% {
+        width: 0;
+    }
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item {
+    padding: var(--space-4);
+    border-radius: var(--space-3);
+    background: #f9fafb80;
+    border: .0625rem solid #e5e7ebcc;
+    margin-bottom: var(--space-4);
+    transition: background-color var(--normal-transition), border var(--normal-transition), transform var(--normal-transition), box-shadow var(--normal-transition);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item:hover {
+    background: #f3f4f6cc;
+    border: .0625rem solid #d1d5dbe6;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 7px -1px var(--shadow-color);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: var(--space-2);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .category-info {
+    justify-content: flex-start;
+    align-self: flex-start;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .budget-range-number {
+    align-self: flex-end;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--space-2);
+    justify-content: center;
+    margin-left: var(--space-3)
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .details h3 {
+    color: var(--color-gray-900);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .details p {
+    color: var(--color-gray-500);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .budget-range-number p {
+    color: var(--color-gray-900);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .budget-range-number span {
+    border-radius: 1.25rem;
+    padding: .125rem var(--space-2);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item.film .icon {
+    background-color: var(--color-orange-100);
+    color: var(--color-orange-600);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item.home .category-details .budget-range-number span,
+.dashboard .dashboard-content .budget-overview .budget-categories .item.film .category-details .budget-range-number span {
+    color: var(--color-green-800);
+    background-color: var(--color-green-100);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item.film .gray-range .color-range {
+    background-color: var(--color-orange-500);
+    width: 50%;
+}
+
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item.bills .icon {
+    background-color: var(--color-red-100);
+    color: var(--color-red-600);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item.bills .category-details .budget-range-number span {
+    color: var(--color-red-800);
+    background-color: var(--color-red-100);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item.bills .gray-range .color-range {
+    background-color: var(--color-red-500);
+    width: 100%;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item.heart .icon {
+    background-color: var(--color-pink-100);
+    color: var(--color-pink-600);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item.heart .category-details .budget-range-number span {
+    color: var(--color-yellow-800);
+    background-color: var(--color-yellow-100);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item.heart .gray-range .color-range {
+    background-color: var(--color-pink-500);
+    width: 80%;
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item.home .icon {
+    background-color: var(--color-green-100);
+    color: var(--color-green-600);
+}
+
+.dashboard .dashboard-content .budget-overview .budget-categories .item.home .gray-range .color-range {
+    background-color: var(--color-green-500);
+    width: 86%;
+}
+
+/* ------------------------------end of budget overview--------------------------------- */
+
+
+/* ------------------------------income vs outcome card--------------------------------- */
+.dashboard .dashboard-content .income-vs-outcome-card {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    /* height: fit-content;
+    grid-area: income-vs-outcome-card; */
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .chart-legend .item,
+.dashboard .dashboard-content .income-vs-outcome-card .chart-legend {
+    justify-content: center;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .chart-legend .income.item {
+    padding-left: var(--space-4);
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .chart-legend .chart-legend-color {
+    border-radius: .125rem;
+    width: 12px;
+    height: 12px;
+    margin-left: var(--space-2);
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .chart-legend .income.item .chart-legend-color {
+    background-color: #10b981;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .chart-legend .outcome.item .chart-legend-color {
+    background-color: #ef4444;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .chart-legend span {
+    color: #64748b;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts {
+    justify-content: space-around;
+    padding: var(--space-4) 0;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart .bars {
+    display: flex;
+    align-items: end;
+    height: 145px;
+    gap: .125rem;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart .bar {
+    width: 16px;
+    border-radius: .1875rem .1875rem 0 0;
+    transition: opacity var(--normal-transition);
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart .bar:hover {
+    opacity: 0.8;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart .bar-income {
+    background-color: #10b981;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart .bar-outcome {
+    background-color: #ef4444;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart.week-three .bar-income,
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart.week-one .bar-income {
+    height: 92px;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart.week-one .bar-outcome {
+    height: 30px;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart.week-two .bar-income {
+    height: 98px;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart.week-four .bar-outcome,
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart.week-two .bar-outcome {
+    height: 45px;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart.week-three .bar-outcome {
+    height: 38px;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart.week-four .bar-income {
+    height: 96px;
+}
+
+.dashboard .dashboard-content .income-vs-outcome-card .charts .chart .week span {
+    color: #64748b;
+    margin-top: var(--space-2);
+}
+
+/* ------------------------------end of income vs outcome card--------------------------------- */
+
+/* ------------------------------account summary card--------------------------------- */
+
+.dashboard .dashboard-content .account-summary-card {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    /* grid-area: account-summary-card;
+    height: fit-content; */
+}
+
+.dashboard .dashboard-content .account-summary-card .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.dashboard .dashboard-content .account-summary-card .cards .card .card-info {
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.dashboard .dashboard-content .account-summary-card .cards .card {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: var(--space-4);
+    background-color: var(--color-gray-50);
+    border: .0625rem solid var(--color-gray-100);
+    border-radius: .75rem;
+    margin-bottom: var(--space-4);
+}
+
+.dashboard .dashboard-content .account-summary-card .cards .card .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: .5rem;
+    justify-content: center;
+}
+
+.dashboard .dashboard-content .account-summary-card .cards .card.current-acc .icon {
+    background-color: var(--color-blue-100);
+    color: var(--color-blue-600);
+}
+
+.dashboard .dashboard-content .account-summary-card .cards .card.saving-acc .icon {
+    background-color: var(--color-green-100);
+    color: var(--color-green-600);
+}
+
+.dashboard .dashboard-content .account-summary-card .cards .card.credit-card .icon {
+    background-color: var(--color-purple-100);
+    color: var(--color-purple-600);
+}
+
+.dashboard .dashboard-content .account-summary-card .cards .card .info {
+    padding-right: var(--space-3);
+}
+
+.dashboard .dashboard-content .account-summary-card .cards .card .info h3 {
+    color: var(--color-gray-900);
+}
+
+.dashboard .dashboard-content .account-summary-card .cards .card .info p {
+    color: var(--color-gray-600);
+}
+
+.dashboard .dashboard-content .account-summary-card .cards .card .price span {
+    color: var(--color-gray-900);
+}
+
+.dashboard .dashboard-content .account-summary-card .cards .card:last-child .price span {
+    color: var(--color-red-600);
+}
+
+/* ------------------------------end of account summary card--------------------------------- */
+
+/* ------------------------------payment method card--------------------------------- */
+
+.dashboard .dashboard-content .payment-method-card {
+    grid-column: 3/4;
+    grid-row: 3/5;
+    /* grid-area: payment-method-card;
+    height: fit-content; */
+}
+
+.dashboard .dashboard-content .payment-method-card .card {
+    margin-bottom: var(--space-4);
+    perspective: 1200;
+}
+
+.dashboard .dashboard-content .payment-method-card .card:last-child {
+    margin-bottom: 0;
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner {
+    transform-style: preserve-3d;
+    transition: transform .7s cubic-bezier(.2, .9, .3, 1);
+    position: relative;
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back,
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color-white);
+    backface-visibility: hidden;
+    border-radius: 0.75rem;
+    inset: 0;
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front {
+    padding: 1.75rem;
+}
+
+.dashboard .dashboard-content .payment-method-card .card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.dashboard .dashboard-content .payment-method-card .card.visa .card-inner .front {
+    position: relative;
+    background-color: var(--color-indigo-800);
+}
+
+.dashboard .dashboard-content .payment-method-card .card.mastercard .card-inner .front {
+    background-color: var(--color-rose-700);
+}
+
+.dashboard .dashboard-content .payment-method-card .card.paypal .card-inner .front {
+    background-color: var(--color-blue-800);
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .primary-badge {
+    padding: .375rem .625rem;
+    border-radius: 1.25rem;
+    font-size: 0.72rem;
+    background-color: hsla(0, 0%, 100%, 0.141);
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-top {
+    justify-content: space-between;
+    padding-bottom: var(--padding-margin-space-2);
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-top .card-type {
+    font-size: 1.875rem;
+    line-height: 1.2;
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-top .card-bg-white {
+    width: 48px;
+    height: 32px;
+    border-radius: .375rem;
+    background-color: rgba(255, 255, 255, 0.208);
+    justify-content: center;
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-top .card-bg-white .inner {
+    width: 50%;
+    height: 50%;
+    border-radius: .375rem;
+    background-color: rgba(255, 255, 255, 0.408);
+}
+
+.dashboard .dashboard-content .payment-method-card .card.paypal .card-inner .front .card-bottom .card-details .expire-date p {
+    color: var(--color-green-400);
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-top .card-type i {
+    font-size: 1.875rem;
+    line-height: 1.2;
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-bottom .serial-num {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-weight: 600;
+    padding-bottom: var(--space-2);
+    letter-spacing: 0px;
+}
+
+.dashboard .dashboard-content .payment-method-card .card:last-child .card-inner .front .card-bottom .serial-num {
+    font-size: 1.125rem;
+    line-height: 1.55556;
+    font-family: "IBMPlexSansArabic-SemiBold";
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-bottom .card-details {
+    justify-content: space-between;
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-bottom .card-details h3 {
+    color: var(--color-gray-300);
+}
+
+.dashboard .dashboard-content .payment-method-card .card.mastercard .card-inner .front .card-bottom .card-details h3 {
+    color: var(--color-red-100);
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back .msg-stripe {
+    background: linear-gradient(90deg, var(--color-black), #111 40%, #2b2b2b);
+    border-radius: .1875rem;
+    height: 52px;
+    box-shadow: inset 0 6px 14px #ffffff05;
+    margin-top: .375rem;
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back {
+    background: linear-gradient(120deg, #051026, #0b1220 45%, #0f1724);
+    position: absolute;
+    padding: var(--space-4);
+    transform: rotateY(180deg);
+
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back .microprint {
+    color: #ffffff7a;
+    letter-spacing: .6px;
+    padding-top: var(--space-2);
+    padding-bottom: .625rem;
+    font-size: .625rem;
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back .signature {
+    color: #111827;
+    background: linear-gradient(90deg, #f8fafc, #eef2f6);
+    border-radius: .25rem;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .375rem var(--space-2)
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back .signature .hidden {
+    background-image: linear-gradient(90deg, #0000000f, #0000002e, #0000000f);
+    border-radius: .125rem;
+    width: 86%;
+    height: 12px;
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back .signature span {
+    color: #000000d9;
+    padding-left: var(--space-2);
+    font-family: monospace;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back .cvv {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back .cvv-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: fit-content;
+    flex-direction: column;
+    padding-top: var(--space-3);
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back .cvv h3 {
+    color: #d1d5dc;
+}
+
+.dashboard .dashboard-content .payment-method-card .card .card-inner .back .cvv .num {
+    min-width: 48px;
+    background-color: var(--color-white);
+    color: #111827;
+    border-radius: .375rem;
+    letter-spacing: 1px;
+    padding: var(--space-2) var(--space-3);
+    text-align: center;
+}
+
+/* ------------------------------end of payment method card--------------------------------- */
+
+/* ------------------------------fonts--------------------------------- */
+
+@font-face {
+    font-family: IBMPlexSansArabic-Regular;
+    src: url(../fonts/IBMPlexSansArabic-Regular.ttf);
+}
+
+@font-face {
+    font-family: IBMPlexSansArabic-Bold;
+    src: url(../fonts/IBMPlexSansArabic-Bold.ttf);
+}
+
+@font-face {
+    font-family: IBMPlexSansArabic-SemiBold;
+    src: url(../fonts/IBMPlexSansArabic-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: IBMPlexSansArabic-Medium;
+    src: url(../fonts/IBMPlexSansArabic-Medium.ttf);
+}
+
+@font-face {
+    font-family: IBMPlexSansArabic-Light;
+    src: url(../fonts/IBMPlexSansArabic-Light.ttf);
+}
+
+/* ------------------------------end of fonts--------------------------------- */
+
+/* ------------------------------responsive--------------------------------- */
+
+@media (max-width:1280px) {
+
+    .dashboard aside .logo .logo-title,
+    aside .aside-content .menu .main-links ul li h2,
+    aside .aside-content .menu .quick-links h2,
+    aside .aside-content .menu .quick-links .links li h3 {
+        display: none;
+    }
+
+    aside .aside-content .menu .main-links ul li span {
+        display: inline-block;
+    }
+
+    aside {
+        width: fit-content;
+    }
+
+    aside .aside-content .menu .main-links ul li,
+    aside .aside-content .menu .main-links ul li.active {
+        padding: var(--space-2) var(--space-3);
+        width: fit-content;
+    }
+
+    aside .aside-content .menu .quick-links .links ul li {
+        padding: 0;
+    }
+
+    aside .aside-content .menu .quick-links .links li .icon {
+        margin-bottom: var(--space-3);
+    }
+
+    aside .aside-content {
+        padding: var(--space-3);
+    }
+
+    .dashboard aside .logo .logo-icon {
+        margin-left: 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    .dashboard .logo .logo-icon i {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .dashboard-container {
+        margin-right: 4rem;
+    }
+
+    .dashboard .dashboard-content .dashboard-content-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "recent-activities income-vs-outcome-card"
+            "final-transaction final-transaction"
+            "bills-card account-summary-card "
+            "budget-overview payment-method-card";
+
+    }
+
+    .dashboard .dashboard-content .recent-activities {
+        grid-area: recent-activities;
+    }
+
+    .dashboard .dashboard-content .income-vs-outcome-card {
+        grid-area: income-vs-outcome-card;
+    }
+
+    .dashboard .dashboard-content .transactions-card {
+        grid-area: final-transaction;
+    }
+
+    .dashboard .dashboard-content .billing {
+        grid-area: bills-card;
+    }
+
+    .dashboard .dashboard-content .account-summary-card {
+        grid-area: account-summary-card;
+    }
+
+    .dashboard .dashboard-content .budget-overview {
+        grid-area: budget-overview;
+    }
+
+    .dashboard .dashboard-content .payment-method-card {
+        grid-area: payment-method-card;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .dashboard .dashboard-content .budget-overview .budget-categories .item .category-details {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width:1024px) {
+    :root {
+        font-size: 14px;
+    }
+
+    .dashboard .dashboard-analysis .cards .card p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:768px) {
+    aside {
+        display: none;
+    }
+
+    .dashboard-container {
+        margin-right: 0;
+    }
+
+    .dashboard .dashboard-analysis .cards {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .dashboard .dashboard-analysis .cards .card {
+        width: 100%;
+    }
+
+    .dashboard .dashboard-content .dashboard-content-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-areas:
+            "recent-activities"
+            "final-transaction"
+            "bills-card"
+            "account-summary-card"
+            "income-vs-outcome-card"
+            "budget-overview"
+            "payment-method-card";
+    }
+}
+
+@media (max-width:640px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .dashboard-container .transactions-card .table-container {
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #9ca3af4d transparent;
+    }
+
+    header .header-container .right-side .logo .status {
+        display: none;
+    }
+
+    header .header-container .status.in-mobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    header .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-4);
+    }
+
+    header .header-container .left-side {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    header .header-container .left-side .user {
+        padding: .5rem .75rem;
+    }
+
+    header .header-container .left-side .user .user-info {
+        display: none;
+    }
+
+    header .header-container .left-side .user .user-profile {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+@media (max-width:325px) {
+    :root {
+        font-size: 10.5px;
+    }
+}
+
+@media (max-width:200px) {
+    :root {
+        font-size: 8.5px;
+    }
+
+    .dashboard .dashboard-content .account-summary-card .cards .card .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .dashboard .dashboard-content .income-vs-outcome-card .charts .chart .bar {
+        width: 10px;
+    }
+
+    .dashboard .dashboard-content .budget-overview .budget-categories .item .category-details .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dashboard .dashboard-content .budget-overview .gray-range,
+    .dashboard .dashboard-content .budget-overview .gray-range .color-range {
+        height: 5px;
+    }
+
+    header .header-container .left-side .user .user-profile,
+    header .header-container .left-side .notification-icon,
+    header .header-container .left-side .search-icon,
+    .dashboard .dashboard-content .recent-activities .activity-cards .card .icon,
+    .dashboard .dashboard-content .transactions-card table tbody .transaction-profile .transaction-avatar {
+        width: 25px;
+        height: 25px;
+    }
+
+    .dashboard header .logo .logo-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    header .header-container .left-side .user {
+        padding: .1875rem .375rem;
+    }
+
+    .dashboard header .logo .logo-icon i {
+        font-size: .75rem;
+    }
+
+    .dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-top .card-bg-white {
+        width: 29px;
+        height: 23px;
+    }
+
+    .dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-top {
+        padding-bottom: .3125rem;
+    }
+
+    .dashboard .dashboard-content .payment-method-card .card .card-inner .front .card-bottom .serial-num {
+        font-size: 1rem;
+    }
+}

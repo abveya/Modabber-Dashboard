@@ -1,0 +1,119 @@
+.w-100 {
+    width: 100%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-47 {
+    width: 47.4%
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-65 {
+    width: 65.8%;
+}
+
+.w-31 {
+    width: 31.6%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-13 {
+    width: 13%;
+}
+
+@media (max-width:1280px) {
+    .lg-100 {
+        width: 100%;
+    }
+
+    .lg-47 {
+        width: 47.4%;
+    }
+
+    .lg-65 {
+        width: 65.8%;
+    }
+
+    .lg-32 {
+        width: 32%;
+    }
+
+    .lg-25 {
+        width: 25%;
+    }
+}
+
+
+@media (max-width:1024px) {
+    .md-100 {
+        width: 100%;
+    }
+
+    .md-50 {
+        width: 50%;
+    }
+
+    .md-33 {
+        width: 33.33%;
+    }
+
+    .md-25 {
+        width: 25%;
+    }
+
+
+    .md-10 {
+        width: 10%;
+    }
+}
+
+@media (max-width:768px) {
+    .sm-100 {
+        width: 100%;
+    }
+
+    .sm-50 {
+        width: 50%;
+    }
+
+    .sm-33 {
+        width: 33.33%;
+    }
+
+    .sm-25 {
+        width: 25%;
+    }
+}
+
+@media (max-width: 640px) {
+    .xs-100 {
+        width: 100%;
+    }
+
+    .xs-12 {
+        width: 11.3%;
+    }
+}
+
+@media (max-width: 230px) {
+    .xxs-100 {
+        width: 100% !important;
+    }
+
+    .xxs-36 {
+        width: 36%;
+    }
+
+    .xxs-15 {
+        width: 15%;
+    }
+}
